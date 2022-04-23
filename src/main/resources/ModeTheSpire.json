@@ -9,5 +9,6 @@
     "basemod"
   ],
   "version": "0.0.1",
-  "sts_version": "04-23-2022"
+  "sts_version": "03-07-2022",
+  "mts_version": "3.26.0"
 }
