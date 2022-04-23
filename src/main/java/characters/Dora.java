@@ -27,12 +27,12 @@ public class Dora extends CustomPlayer {
     private static final String DORA_STAND = "img/char_Dora/Dora.png";
     //各种素材，不是很懂
     private static final String[] ORB_TEXTURES = new String[] {
-            "img/UI_Dora/EPanel/layer6.png",
             "img/UI_Dora/EPanel/layer5.png",
             "img/UI_Dora/EPanel/layer4.png",
             "img/UI_Dora/EPanel/layer3.png",
             "img/UI_Dora/EPanel/layer2.png",
             "img/UI_Dora/EPanel/layer1.png",
+            "img/UI_Dora/EPanel/layer0.png",
             "img/UI_Dora/EPanel/layer5d.png",
             "img/UI_Dora/EPanel/layer4d.png",
             "img/UI_Dora/EPanel/layer3d.png",

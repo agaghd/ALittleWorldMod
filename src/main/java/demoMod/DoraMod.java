@@ -76,7 +76,7 @@ public class DoraMod implements RelicGetSubscriber,
     @Override
     public void receiveEditCharacters() {
         //添加角色到MOD中
-        BaseMod.addCharacter((AbstractPlayer) new Dora("Dora"), MY_CHARACTER_BUTTON, MARISA_PORTRAIT,
+        BaseMod.addCharacter(new Dora("Dora"), MY_CHARACTER_BUTTON, MARISA_PORTRAIT,
                 ThmodClassEnum.Dora_CLASS);
     }
 
@@ -161,7 +161,7 @@ public class DoraMod implements RelicGetSubscriber,
     @Override
     public void receiveEditRelics() {
         //将自定义的遗物添加到这里
-        BaseMod.addRelicToCustomPool((AbstractRelic) new CapOfDora(), AbstractCardEnum.Dora_COLOR);
+        BaseMod.addRelicToCustomPool(new CapOfDora(), AbstractCardEnum.Dora_COLOR);
     }
 
     @Override

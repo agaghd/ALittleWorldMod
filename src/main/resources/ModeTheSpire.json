@@ -1,6 +1,6 @@
 {
-  "modid": "A Little World",
-  "name": "A Little World(CoverStory)",
+  "modid": "ALittleWorld",
+  "name": "ALittleWorld(CoverStory)",
   "author_list": [
     "CoverStory"
   ],
@@ -9,6 +9,5 @@
     "basemod"
   ],
   "version": "0.0.1",
-  "sts_version": "03-07-2022",
-  "mts_version": "3.26.0"
+  "sts_version": "03-07-2022"
 }
