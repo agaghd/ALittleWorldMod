@@ -1,0 +1,13 @@
+{
+  "modid": "A Little World",
+  "name": "A Little World(CoverStory)",
+  "author_list": [
+    "CoverStory"
+  ],
+  "description": "Adds Dora as a new playable character.",
+  "dependencies": [
+    "basemod"
+  ],
+  "version": "0.0.1",
+  "sts_version": "04-23-2022"
+}
