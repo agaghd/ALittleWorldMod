@@ -38,7 +38,7 @@
     </dependencies>
 
     <build>
-        <finalName>Demo3_mod</finalName>
+        <finalName>ALittleWorldMod</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
