@@ -68,6 +68,8 @@ public class Dora extends CustomPlayer {
         retVal.add("StrikeOfDora");
         retVal.add("StrikeOfDora");
         retVal.add("StrikeOfDora");
+        retVal.add("StrikeOfDora");
+        retVal.add("DefendOfDora");
         retVal.add("DefendOfDora");
         retVal.add("DefendOfDora");
         retVal.add("DefendOfDora");

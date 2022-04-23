@@ -36,8 +36,8 @@ public class DoraMod implements RelicGetSubscriber, PostPowerApplySubscriber,
         EditCharactersSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber,
         EditStringsSubscriber, OnCardUseSubscriber, EditKeywordsSubscriber, OnPowersModifiedSubscriber,
         PostDrawSubscriber, PostEnergyRechargeSubscriber {
-    //图片
-    private static final String MOD_BADGE = "img/UI_Dora/badge.png";
+//    //图片
+//    private static final String MOD_BADGE = "img/UI_Dora/badge.png";
     //攻击、技能、能力牌的图片(512)
     private static final String ATTACK_CC = "img/512/bg_attack_Dora_s.png";
     private static final String SKILL_CC = "img/512/bg_skill_Dora_s.png";
@@ -58,7 +58,7 @@ public class DoraMod implements RelicGetSubscriber, PostPowerApplySubscriber,
 
     public DoraMod() {
         //构造方法，初始化各种参数
-        BaseMod.subscribe((ISubscriber) this);
+        BaseMod.subscribe(this);
         BaseMod.addColor(AbstractCardEnum.Dora_COLOR, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER,
                 ATTACK_CC, SKILL_CC, POWER_CC, ENERGY_ORB_CC, ATTACK_CC_PORTRAIT, SKILL_CC_PORTRAIT, POWER_CC_PORTRAIT,
                 ENERGY_ORB_CC_PORTRAIT, CARD_ENERGY_ORB);
@@ -129,7 +129,7 @@ public class DoraMod implements RelicGetSubscriber, PostPowerApplySubscriber,
         if (Settings.language == Settings.GameLanguage.ZHS) {
             card = "localization/ALittleWorldMod_Dora_cards-zh.json";
             relic = "localization/ALittleWorldMod_Dora_relics-zh.json";
-            power = "localization/ALittleWorldMod_Dora_powers-zh.json";
+//            power = "localization/ALittleWorldMod_Dora_powers-zh.json";
             //potion = "localization/ALittleWorldMod_YM_potions-zh.json";
             //event = "localization/ALittleWorldMod_YM_events-zh.json";
         } else {
@@ -140,8 +140,8 @@ public class DoraMod implements RelicGetSubscriber, PostPowerApplySubscriber,
         BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
         String cardStrings = Gdx.files.internal(card).readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
-        String powerStrings = Gdx.files.internal(power).readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
+//        String powerStrings = Gdx.files.internal(power).readString(String.valueOf(StandardCharsets.UTF_8));
+//        BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
 //     String potionStrings = Gdx.files.internal(potion).readString(String.valueOf(StandardCharsets.UTF_8));
 //     BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
 //     String eventStrings = Gdx.files.internal(event).readString(String.valueOf(StandardCharsets.UTF_8));
