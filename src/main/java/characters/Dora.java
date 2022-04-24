@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import pathes.ThmodClassEnum;
 import pathes.AbstractCardEnum;
+
 import java.util.ArrayList;
 
 public class Dora extends CustomPlayer {
@@ -40,7 +41,7 @@ public class Dora extends CustomPlayer {
             "img/UI_Dora/EPanel/layer1d.png" };
     //
     private static final String ORB_VFX = "img/UI_Dora/energyBlueVFX.png";
-    private static final float[] LAYER_SPEED = new float[] { -40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F };
+    private static final float[] LAYER_SPEED = new float[]{-40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F};
     //初始生命，最大生命，初始金币,初始的充能球栏位（机器人）,最后一个应该是进阶14时的最大生命值下降
     private static final int STARTING_HP = 75;
     private static final int MAX_HP = 75;
@@ -52,7 +53,7 @@ public class Dora extends CustomPlayer {
 
     public Dora(String name) {
         //构造方法，初始化参数
-        super(name, ThmodClassEnum.Dora_CLASS, ORB_TEXTURES, ORB_VFX, LAYER_SPEED, (String)null, (String)null);
+        super(name, ThmodClassEnum.Dora_CLASS, ORB_TEXTURES, ORB_VFX, LAYER_SPEED, (String) null, (String) null);
         this.dialogX = this.drawX + 0.0F * Settings.scale;
         this.dialogY = this.drawY + 220.0F * Settings.scale;
         initializeClass(DORA_STAND, DORA_SHOULDER_2, DORA_SHOULDER_1, DORA_CORPSE,
@@ -67,9 +68,6 @@ public class Dora extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add("StrikeOfDora");
         retVal.add("StrikeOfDora");
-        retVal.add("StrikeOfDora");
-        retVal.add("StrikeOfDora");
-        retVal.add("DefendOfDora");
         retVal.add("DefendOfDora");
         retVal.add("DefendOfDora");
         retVal.add("DefendOfDora");
@@ -88,8 +86,8 @@ public class Dora extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         //选英雄界面的文字描述
-        String title="";
-        String flavor="";
+        String title = "";
+        String flavor = "";
         if (Settings.language == Settings.GameLanguage.ZHS) {
             title = "朵菈";
             flavor = "玩具世界的管理人朵菈";
@@ -103,7 +101,7 @@ public class Dora extends CustomPlayer {
             flavor = "The Manager Of Toys world";
         }
 
-        return new CharSelectInfo(title, flavor, STARTING_HP, MAX_HP,HAND_SIZE , STARTING_GOLD, ASCENSION_MAX_HP_LOSS,
+        return new CharSelectInfo(title, flavor, STARTING_HP, MAX_HP, HAND_SIZE, STARTING_GOLD, ASCENSION_MAX_HP_LOSS,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
 
@@ -111,7 +109,7 @@ public class Dora extends CustomPlayer {
     @Override
     public String getTitle(PlayerClass playerClass) {
         //应该是进游戏后左上角的角色名
-        String title="";
+        String title = "";
         if (Settings.language == Settings.GameLanguage.ZHS) {
             title = "朵菈";
         } else if (Settings.language == Settings.GameLanguage.ZHT) {
@@ -159,9 +157,11 @@ public class Dora extends CustomPlayer {
     public void doCharSelectScreenSelectEffect() {
 
     }
+
     public void updateOrb(int orbCount) {
         this.energyOrb.updateOrb(orbCount);
     }
+
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
         return null;
@@ -205,6 +205,7 @@ public class Dora extends CustomPlayer {
 
         return null;
     }
+
     public void applyEndOfTurnTriggers() {
         super.applyEndOfTurnTriggers();
     }

@@ -46,7 +46,7 @@ public class DoraMod implements RelicGetSubscriber,
         PostDrawSubscriber,
         PostEnergyRechargeSubscriber {
     //    //图片
-//    private static final String MOD_BADGE = "img/UI_Dora/badge.png";
+    private static final String MOD_BADGE = "img/UI_Dora/badge.png";
     //攻击、技能、能力牌的图片(512)
     private static final String ATTACK_CC = "img/512/bg_attack_Dora_s.png";
     private static final String SKILL_CC = "img/512/bg_skill_Dora_s.png";
@@ -68,9 +68,7 @@ public class DoraMod implements RelicGetSubscriber,
     public DoraMod() {
         //构造方法，初始化各种参数
         BaseMod.subscribe(this);
-        BaseMod.addColor(AbstractCardEnum.Dora_COLOR, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER,
-                ATTACK_CC, SKILL_CC, POWER_CC, ENERGY_ORB_CC, ATTACK_CC_PORTRAIT, SKILL_CC_PORTRAIT, POWER_CC_PORTRAIT,
-                ENERGY_ORB_CC_PORTRAIT, CARD_ENERGY_ORB);
+        BaseMod.addColor(AbstractCardEnum.Dora_COLOR, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER, ATTACK_CC, SKILL_CC, POWER_CC, ENERGY_ORB_CC, ATTACK_CC_PORTRAIT, SKILL_CC_PORTRAIT, POWER_CC_PORTRAIT, ENERGY_ORB_CC_PORTRAIT, CARD_ENERGY_ORB);
     }
 
     @Override
@@ -141,11 +139,10 @@ public class DoraMod implements RelicGetSubscriber,
         } else {
             //其他语言配置的JSON
         }
-
-        String relicStrings = Gdx.files.internal(relic).readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
         String cardStrings = Gdx.files.internal(card).readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
+        String relicStrings = Gdx.files.internal(relic).readString(String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
     }
 
     private void loadCardsToAdd() {
@@ -195,7 +192,9 @@ public class DoraMod implements RelicGetSubscriber,
         while (var1.hasNext()) {
             AbstractCard c = var1.next();
             AbstractCard card = c.makeStatEquivalentCopy();
-            AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(card, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, false, true, true));
+            AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(card,
+                    Settings.WIDTH / 2.0F,
+                    Settings.HEIGHT / 2.0F, false, true, true));
         }
         recyclecards.clear();
     }

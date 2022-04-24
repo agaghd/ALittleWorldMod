@@ -30,8 +30,8 @@ public class StrikeOfDora extends CustomCard {
     public static final String ID = "StrikeOfDora";
 
     public StrikeOfDora() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.Dora_COLOR,
-                CardRarity.BASIC, CardTarget.ENEMY);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.ATTACK,
+                AbstractCardEnum.Dora_COLOR, CardRarity.BASIC, CardTarget.ENEMY);
         //添加基础攻击标签和将伤害设为6
         this.tags.add(BaseModCardTags.BASIC_STRIKE);
         this.baseDamage = ATTACK_DMG;

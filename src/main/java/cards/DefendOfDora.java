@@ -26,6 +26,7 @@ public class DefendOfDora extends CustomCard {
     // 防御图片
     public static final String IMG_PATH = "img/cards_Dora/Defend.png";
 
+    //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
     public DefendOfDora() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Dora_COLOR,
                 CardRarity.BASIC, CardTarget.SELF);
