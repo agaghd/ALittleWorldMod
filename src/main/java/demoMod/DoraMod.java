@@ -51,7 +51,7 @@ public class DoraMod implements RelicGetSubscriber,
     private static final String ATTACK_CC = "img/512/bg_attack_Dora_s.png";
     private static final String SKILL_CC = "img/512/bg_skill_Dora_s.png";
     private static final String POWER_CC = "img/512/bg_power_Dora_s.png";
-    private static final String ENERGY_ORB_CC = "img/512/Dora Orb.png";
+    private static final String ENERGY_ORB_CC = "img/512/DoraOrb.png";
     //攻击、技能、能力牌的图片(1024)
     private static final String ATTACK_CC_PORTRAIT = "img/1024/bg_attack_Dora.png";
     private static final String SKILL_CC_PORTRAIT = "img/1024/bg_skill_Dora.png";
