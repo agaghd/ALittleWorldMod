@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import pathes.ThmodClassEnum;
 import pathes.AbstractCardEnum;
+import pathes.ThmodClassEnum;
 
 import java.util.ArrayList;
 
@@ -27,7 +27,7 @@ public class Dora extends CustomPlayer {
     private static final String DORA_CORPSE = "img/char_Dora/fallen.png";
     private static final String DORA_STAND = "img/char_Dora/Dora.png";
     //各种素材，不是很懂
-    private static final String[] ORB_TEXTURES = new String[] {
+    private static final String[] ORB_TEXTURES = new String[]{
             "img/UI_Dora/EPanel/layer5.png",
             "img/UI_Dora/EPanel/layer4.png",
             "img/UI_Dora/EPanel/layer3.png",
@@ -38,7 +38,7 @@ public class Dora extends CustomPlayer {
             "img/UI_Dora/EPanel/layer4d.png",
             "img/UI_Dora/EPanel/layer3d.png",
             "img/UI_Dora/EPanel/layer2d.png",
-            "img/UI_Dora/EPanel/layer1d.png" };
+            "img/UI_Dora/EPanel/layer1d.png"};
     //
     private static final String ORB_VFX = "img/UI_Dora/energyBlueVFX.png";
     private static final float[] LAYER_SPEED = new float[]{-40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F};
@@ -68,9 +68,14 @@ public class Dora extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add("StrikeOfDora");
         retVal.add("StrikeOfDora");
+        retVal.add("StrikeOfDora");
         retVal.add("DefendOfDora");
         retVal.add("DefendOfDora");
         retVal.add("DefendOfDora");
+        retVal.add("ToysCastle");
+        retVal.add("ToysHelmet");
+        retVal.add("TwinShoot");
+        retVal.add("RangeLock");
         return retVal;
     }
 

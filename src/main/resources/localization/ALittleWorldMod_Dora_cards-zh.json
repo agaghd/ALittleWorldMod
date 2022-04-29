@@ -6,5 +6,22 @@
   "DefendOfDora": {
     "NAME": "防御",
     "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "ToysCastle": {
+    "NAME": "玩具城堡",
+    "DESCRIPTION": "阻止下一次你受到的生命值损伤。",
+    "UPGRADE_DESCRIPTION": "阻止下 !M! 次你受到的生命值损伤。"
+  },
+  "TwinShoot": {
+    "NAME": "连射",
+    "DESCRIPTION": "造成 !D! 点伤害两次。"
+  },
+  "ToysHelmet": {
+    "NAME": "玩具安全帽",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "RangeLock": {
+    "NAME": "范围锁定",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。"
   }
 }

@@ -2,14 +2,12 @@ package demoMod;
 
 import basemod.BaseMod;
 import basemod.interfaces.*;
-import cards.DefendOfDora;
-import cards.StrikeOfDora;
+import cards.*;
 import characters.Dora;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -150,8 +148,10 @@ public class DoraMod implements RelicGetSubscriber,
         this.cardsToAdd.clear();
         this.cardsToAdd.add(new StrikeOfDora());
         this.cardsToAdd.add(new DefendOfDora());
-//        this.cardsToAdd.add(new SavePower());
-//        this.cardsToAdd.add(new Printf());
+        this.cardsToAdd.add(new ToysCastle());
+        this.cardsToAdd.add(new TwinShoot());
+        this.cardsToAdd.add(new ToysHelmet());
+        this.cardsToAdd.add(new RangeLock());
     }
 
     //添加一度
