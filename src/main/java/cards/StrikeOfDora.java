@@ -19,7 +19,8 @@ import pathes.AbstractCardEnum;
 public class StrikeOfDora extends CustomCard {
 
     //  .json文件提取
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("StrikeOfDora");
+    private static final CardStrings cardStrings
+            = CardCrawlGame.languagePack.getCardStrings("StrikeOfDora");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     //  打击图片

@@ -15,16 +15,17 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pathes.AbstractCardEnum;
 
 /**
- * 朵拉--打击
+ * 朵拉--全弹发射
  */
 public class FireAllBullets extends CustomCard {
 
     //  .json文件提取
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("FireAllBullets");
+    private static final CardStrings cardStrings
+            = CardCrawlGame.languagePack.getCardStrings("FireAllBullets");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     //  打击图片
-    public static final String IMG_PATH = "img/cards_Dora/attack/FireAllBullets.png";
+    public static final String IMG_PATH = "img/cards_Dora/Default.png";
     private static final int COST = -1;
     private static final int ATTACK_DMG = 7;
     private static final int UPGRADE_PLUS_DMG = 3;

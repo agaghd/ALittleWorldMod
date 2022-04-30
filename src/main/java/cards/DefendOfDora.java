@@ -16,7 +16,8 @@ import pathes.AbstractCardEnum;
  */
 public class DefendOfDora extends CustomCard {
     //从.json文件中提取
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("DefendOfDora");
+    private static final CardStrings cardStrings
+            = CardCrawlGame.languagePack.getCardStrings("DefendOfDora");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
@@ -58,7 +59,7 @@ public class DefendOfDora extends CustomCard {
         if (!this.upgraded) {
             //更改名字和提高3点伤害
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_BLOCK);
+            upgradeBlock(UPGRADE_PLUS_BLOCK);
         }
     }
 }

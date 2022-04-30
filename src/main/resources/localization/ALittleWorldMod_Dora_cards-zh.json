@@ -7,6 +7,11 @@
     "NAME": "防御",
     "DESCRIPTION": "获得 !B! 点格挡。"
   },
+  "GashaponMachine": {
+    "NAME": "扭蛋机",
+    "DESCRIPTION": "获取一张随机欧帕兹牌。",
+    "UPGRADE_DESCRIPTION": "获取一张升级过的随机欧帕兹牌。"
+  },
   "ToysCastle": {
     "NAME": "玩具堡垒",
     "DESCRIPTION": "阻止下一次你受到的生命值损伤。",
@@ -32,8 +37,72 @@
     "NAME": "全弹发射",
     "DESCRIPTION": "造成 !D! 点伤害 X 次。"
   },
+  "TwinForm": {
+    "NAME": "双生形态",
+    "DESCRIPTION": "回合开始时，随机获取一张绝望魔法。",
+    "UPGRADE_DESCRIPTION": "回合开始时，随机获取一张升级过的绝望魔法。"
+  },
   "PenetrateBullet": {
     "NAME": "穿甲弹",
     "DESCRIPTION": "去除一名敌人的所有格挡值，造成 !D! 点伤害。"
+  },
+  "ButtHit": {
+    "NAME": "铳身攻击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
+  },
+  "BurstShot": {
+    "NAME": "爆发射击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。"
+  },
+  "Ricochet": {
+    "NAME": "跳弹",
+    "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次。"
+  },
+  "RailGun": {
+    "NAME": "电磁炮",
+    "DESCRIPTION": "随造成 !D! 点伤害， 当前能量与上限每差一点增加 !M! 点伤害。"
+  },
+  "PrecisionShoot": {
+    "NAME": "精密射击",
+    "DESCRIPTION": "造成 !D! 点伤害, 给与 !M! 层虚弱。"
+  },
+  "FirepowerIncrease": {
+    "NAME": "火力增幅",
+    "DESCRIPTION": "获得 !M! 点力量。"
+  },
+  "Dismantling": {
+    "NAME": "拆解",
+    "DESCRIPTION": "消耗一张牌，获得一张随机欧帕兹。"
+  },
+  "ConveyorBelt": {
+    "NAME": "传送履带",
+    "DESCRIPTION": "你每打出一张欧帕兹牌，抽一张牌。"
+  },
+  "ToysArmor": {
+    "NAME": "玩具装甲",
+    "DESCRIPTION": "获得 !M! 点多层护甲"
+  },
+  "ClawMachine": {
+    "NAME": "娃娃机",
+    "DESCRIPTION": "抽取攻击牌，技能牌，能力牌各一张。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "抽取攻击牌，技能牌，能力牌各一张。"
+  },
+  "Pachinko": {
+    "NAME": "柏青哥",
+    "DESCRIPTION": "获取-10~30金币。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "获取-10~30金币。"
+  },
+  "Refill": {
+    "NAME": "再装填",
+    "DESCRIPTION": "每回合第一次打出欧帕兹牌时，获得一点能量"
+  },
+  "RollerCoaster": {
+    "NAME": "过山车",
+    "DESCRIPTION": "抽 !M! 张牌，在抽牌堆加入一张眩晕。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。"
+  },
+  "HauntedHouseAdventure": {
+    "NAME": "鬼屋冒险",
+    "DESCRIPTION": "所有人获得 !M! 层无实体。 NL 消耗"
   }
 }

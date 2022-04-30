@@ -15,7 +15,8 @@ import pathes.AbstractCardEnum;
  */
 public class PumpkinAtomicBomb extends CustomCard {
 
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("PumpkinAtomicBomb");
+    private static final CardStrings cardStrings
+            = CardCrawlGame.languagePack.getCardStrings("PumpkinAtomicBomb");
     private static final String ID = "PumpkinAtomicBomb";
     private static final String IMG = "img/cards_Dora/attack/PumpkinAtomicBomb.png";
     private static final int COST = 3;

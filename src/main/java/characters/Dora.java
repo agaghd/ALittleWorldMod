@@ -67,14 +67,35 @@ public class Dora extends CustomPlayer {
         //添加初始卡组
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add("StrikeOfDora");
+        retVal.add("StrikeOfDora");
+        retVal.add("StrikeOfDora");
+        retVal.add("StrikeOfDora");
         retVal.add("DefendOfDora");
-        retVal.add("ToysCastle");
-        retVal.add("ToysHelmet");
-        retVal.add("TwinShoot");
-        retVal.add("RangeLock");
-        retVal.add("PumpkinAtomicBomb");
-        retVal.add("FireAllBullets");
-        retVal.add("PenetrateBullet");
+        retVal.add("DefendOfDora");
+        retVal.add("DefendOfDora");
+        retVal.add("DefendOfDora");
+        retVal.add("GashaponMachine");
+//        retVal.add("ToysCastle");
+//        retVal.add("ToysHelmet");
+//        retVal.add("TwinShoot");
+//        retVal.add("RangeLock");
+//        retVal.add("PumpkinAtomicBomb");
+//        retVal.add("FireAllBullets");
+//        retVal.add("PenetrateBullet");
+//        retVal.add("ButtHit");
+//        retVal.add("TwinForm");
+//        retVal.add("BurstShot");
+//        retVal.add("Ricochet");
+//        retVal.add("RailGun");
+//        retVal.add("PrecisionShoot");
+//        retVal.add("FirepowerIncrease");
+//        retVal.add("Dismantling");
+//        retVal.add("ConveyorBelt");
+//        retVal.add("ToysArmor");
+        retVal.add("Pachinko");
+//        retVal.add("Refill");
+//        retVal.add("RollerCoaster");
+//        retVal.add("HauntedHouseAdventure");
         return retVal;
     }
 
