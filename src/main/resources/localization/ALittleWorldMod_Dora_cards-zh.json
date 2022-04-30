@@ -8,7 +8,7 @@
     "DESCRIPTION": "获得 !B! 点格挡。"
   },
   "ToysCastle": {
-    "NAME": "玩具城堡",
+    "NAME": "玩具堡垒",
     "DESCRIPTION": "阻止下一次你受到的生命值损伤。",
     "UPGRADE_DESCRIPTION": "阻止下 !M! 次你受到的生命值损伤。"
   },
@@ -17,11 +17,23 @@
     "DESCRIPTION": "造成 !D! 点伤害两次。"
   },
   "ToysHelmet": {
-    "NAME": "玩具安全帽",
+    "NAME": "玩具头盔",
     "DESCRIPTION": "获得 !B! 点格挡。"
   },
   "RangeLock": {
     "NAME": "范围锁定",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。"
+  },
+  "PumpkinAtomicBomb": {
+    "NAME": "南瓜原子弹",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 消耗。"
+  },
+  "FireAllBullets": {
+    "NAME": "全弹发射",
+    "DESCRIPTION": "造成 !D! 点伤害 X 次。"
+  },
+  "PenetrateBullet": {
+    "NAME": "穿甲弹",
+    "DESCRIPTION": "去除一名敌人的所有格挡值，造成 !D! 点伤害。"
   }
 }

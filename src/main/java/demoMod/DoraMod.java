@@ -152,6 +152,9 @@ public class DoraMod implements RelicGetSubscriber,
         this.cardsToAdd.add(new TwinShoot());
         this.cardsToAdd.add(new ToysHelmet());
         this.cardsToAdd.add(new RangeLock());
+        this.cardsToAdd.add(new PumpkinAtomicBomb());
+        this.cardsToAdd.add(new FireAllBullets());
+        this.cardsToAdd.add(new PenetrateBullet());
     }
 
     //添加一度

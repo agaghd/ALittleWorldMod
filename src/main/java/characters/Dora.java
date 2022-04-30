@@ -67,15 +67,14 @@ public class Dora extends CustomPlayer {
         //添加初始卡组
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add("StrikeOfDora");
-        retVal.add("StrikeOfDora");
-        retVal.add("StrikeOfDora");
-        retVal.add("DefendOfDora");
-        retVal.add("DefendOfDora");
         retVal.add("DefendOfDora");
         retVal.add("ToysCastle");
         retVal.add("ToysHelmet");
         retVal.add("TwinShoot");
         retVal.add("RangeLock");
+        retVal.add("PumpkinAtomicBomb");
+        retVal.add("FireAllBullets");
+        retVal.add("PenetrateBullet");
         return retVal;
     }
 
