@@ -1,18 +1,12 @@
 package cards;
 
 import basemod.abstracts.CustomCard;
-import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.utility.DrawPileToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
-import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
-import com.megacrit.cardcrawl.vfx.combat.MiracleEffect;
 import pathes.AbstractCardEnum;
 
 
@@ -36,8 +30,9 @@ public class ClawMachine extends CustomCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        //TODO 抽取攻击牌，技能牌，能力牌各一张 消耗
-        addToBot(new DrawCardAction(abstractPlayer, this.magicNumber));
+        addToBot(new DrawPileToHandAction(this.magicNumber, CardType.ATTACK));
+        addToBot(new DrawPileToHandAction(this.magicNumber, CardType.SKILL));
+        addToBot(new DrawPileToHandAction(this.magicNumber, CardType.POWER));
     }
 
     @Override

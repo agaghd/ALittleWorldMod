@@ -84,8 +84,8 @@
   },
   "ClawMachine": {
     "NAME": "娃娃机",
-    "DESCRIPTION": "抽取攻击牌，技能牌，能力牌各一张。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "抽取攻击牌，技能牌，能力牌各一张。"
+    "DESCRIPTION": "从抽牌堆抽取攻击牌，技能牌，能力牌各一张。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "从抽牌堆抽取攻击牌，技能牌，能力牌各一张。"
   },
   "Pachinko": {
     "NAME": "柏青哥",
@@ -107,7 +107,7 @@
   },
   "RussianDoll": {
     "NAME": "俄罗斯人形",
-    "DESCRIPTION": "获得一张绝望魔法，本回合其消耗为0。NL 消耗"
+    "DESCRIPTION": "获得一张绝望魔法，本回合其消耗为0。 NL 消耗"
   },
   "DeathAll": {
     "NAME": "死亡叹息",

@@ -42,6 +42,8 @@ public class RailGun extends CustomCard {
         }
     }
 
+
+
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         int energyMax = AbstractDungeon.player.energy.energy;

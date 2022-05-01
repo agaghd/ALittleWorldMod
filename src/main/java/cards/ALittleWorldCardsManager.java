@@ -36,6 +36,7 @@ public class ALittleWorldCardsManager {
         DORA_CARDS.add(new RollerCoaster());
         DORA_CARDS.add(new HauntedHouseAdventure());
         DORA_CARDS.add(new RussianDoll());
+        DORA_CARDS.add(new ClawMachine());
 
         DESPAIR_CARDS.add(new DeathAll());
         DESPAIR_CARDS.add(new UnilateralPressing());
