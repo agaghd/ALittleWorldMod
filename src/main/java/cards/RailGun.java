@@ -43,19 +43,35 @@ public class RailGun extends CustomCard {
     }
 
 
-
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        addToBot(new DamageAction(abstractMonster,
+                new DamageInfo(abstractPlayer, this.damage, this.damageTypeForTurn),
+                AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        this.rawDescription = cardStrings.DESCRIPTION;
+        initializeDescription();
+    }
+
+    @Override
+    public void applyPowers() {
         int energyMax = AbstractDungeon.player.energy.energy;
         int currentEnergy = EnergyPanel.getCurrentEnergy();
         int deta = energyMax - currentEnergy;
         if (deta < 0) {
             deta = 0;
         }
-        int totalDamage = this.damage + deta * this.magicNumber;
-        addToBot(new DamageAction(abstractMonster,
-                new DamageInfo(abstractPlayer, totalDamage, this.damageTypeForTurn),
-                AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        int subDamage = deta * this.magicNumber;
+        this.baseDamage = DAMAGE + subDamage;
+        super.applyPowers();
+        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+        initializeDescription();
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        super.calculateCardDamage(mo);
+        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+        initializeDescription();
     }
 
     @Override

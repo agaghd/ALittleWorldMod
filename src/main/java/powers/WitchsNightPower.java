@@ -45,7 +45,7 @@ public class WitchsNightPower extends AbstractPower {
         sb.append(amount);
         sb.append(powerStrings.DESCRIPTIONS[1]);
         for (int i = 0; i < this.amount; i++) {
-            sb.append("[R] ");
+            sb.append(" [R] ");
         }
         sb.append(powerStrings.DESCRIPTIONS[2]);
         this.description = sb.toString();

@@ -21,7 +21,7 @@ public class ToysArmor extends CustomCard {
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final int COST = 1;
-    private static final int BLOCK_AMT = 5;
+    private static final int BLOCK_AMT = 4;
     private static final int UPGRADE_PLUS_BLOCK = 2;
     private static final String ID = "ToysArmor";
     // 防御图片
@@ -54,9 +54,8 @@ public class ToysArmor extends CustomCard {
     public void upgrade() {
         //卡牌升级后的效果
         if (!this.upgraded) {
-            //更改名字和提高3点伤害
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(UPGRADE_PLUS_BLOCK);
         }
     }
 }

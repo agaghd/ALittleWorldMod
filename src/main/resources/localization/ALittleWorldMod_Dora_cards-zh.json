@@ -60,7 +60,10 @@
   },
   "RailGun": {
     "NAME": "电磁炮",
-    "DESCRIPTION": "随造成 !D! 点伤害， 当前 [R] 与上限每差一点增加 !M! 点伤害。"
+    "DESCRIPTION": "随造成 !D! 点伤害， 当前 [R] 与上限每差一点增加 !M! 点伤害。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （造成 !D! 点伤害。）"
+    ]
   },
   "PrecisionShoot": {
     "NAME": "精密射击",
