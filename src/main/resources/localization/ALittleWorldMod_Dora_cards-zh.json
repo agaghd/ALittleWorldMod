@@ -60,7 +60,7 @@
   },
   "RailGun": {
     "NAME": "电磁炮",
-    "DESCRIPTION": "随造成 !D! 点伤害， 当前能量与上限每差一点增加 !M! 点伤害。"
+    "DESCRIPTION": "随造成 !D! 点伤害， 当前 [R] 与上限每差一点增加 !M! 点伤害。"
   },
   "PrecisionShoot": {
     "NAME": "精密射击",
@@ -94,7 +94,7 @@
   },
   "Refill": {
     "NAME": "再装填",
-    "DESCRIPTION": "每回合第一次打出欧帕兹牌时，获得一点能量"
+    "DESCRIPTION": "每回合第一次打出欧帕兹牌时，获得 [R]"
   },
   "RollerCoaster": {
     "NAME": "过山车",
@@ -104,5 +104,46 @@
   "HauntedHouseAdventure": {
     "NAME": "鬼屋冒险",
     "DESCRIPTION": "所有人获得 !M! 层无实体。 NL 消耗"
+  },
+  "RussianDoll": {
+    "NAME": "俄罗斯人形",
+    "DESCRIPTION": "获得一张绝望魔法，其消耗为0。NL 消耗"
+  },
+  "DeathAll": {
+    "NAME": "死亡叹息",
+    "DESCRIPTION": "消灭所有生命值小于等于你最大生命值的敌人。"
+  },
+  "UnilateralPressing": {
+    "NAME": "单边压制",
+    "DESCRIPTION": "在本回合结束后，额外获得一回合。 NL 结束你的回合。 NL 消耗 "
+  },
+  "EXCharm": {
+    "NAME": "EX魅惑",
+    "DESCRIPTION": "敌方全体获得一层魅惑。  NL 消耗"
+  },
+  "DanceInTheDark": {
+    "NAME": "黑暗之舞",
+    "DESCRIPTION": "消除所有敌人的增益效果。 NL 消耗"
+  },
+  "GroudZero": {
+    "NAME": "原爆起点",
+    "DESCRIPTION": "眩晕所有敌人。 NL 消耗"
+  },
+  "ChildPlay": {
+    "NAME": "孩童游戏",
+    "DESCRIPTION": "移除所有敌人的人工制品并给与 !M! 层虚弱。 NL 消耗"
+  },
+  "BreakLife": {
+    "NAME": "生命断流",
+    "DESCRIPTION": "敌方全体最大生命减少 !M! %。"
+  },
+  "OverDoze": {
+    "NAME": "过量强化",
+    "DESCRIPTION": "所有敌人的强化效果反转。 NL 消耗"
+  },
+  "WitchsNight": {
+    "NAME": "魔女之夜",
+    "DESCRIPTION": "回合开始时，抽 !M! 张牌，获得 [R] [R]",
+    "UPGRADE_DESCRIPTION": "回合开始时，抽 !M! 张牌，获得 [R] [R] [R]"
   }
 }

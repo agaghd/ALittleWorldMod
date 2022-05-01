@@ -67,14 +67,14 @@ public class Dora extends CustomPlayer {
         //添加初始卡组
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add("StrikeOfDora");
-        retVal.add("StrikeOfDora");
-        retVal.add("StrikeOfDora");
-        retVal.add("StrikeOfDora");
+//        retVal.add("StrikeOfDora");
+//        retVal.add("StrikeOfDora");
+//        retVal.add("StrikeOfDora");
         retVal.add("DefendOfDora");
-        retVal.add("DefendOfDora");
-        retVal.add("DefendOfDora");
-        retVal.add("DefendOfDora");
-        retVal.add("GashaponMachine");
+//        retVal.add("DefendOfDora");
+//        retVal.add("DefendOfDora");
+//        retVal.add("DefendOfDora");
+//        retVal.add("GashaponMachine");
 //        retVal.add("ToysCastle");
 //        retVal.add("ToysHelmet");
 //        retVal.add("TwinShoot");
@@ -92,10 +92,19 @@ public class Dora extends CustomPlayer {
 //        retVal.add("Dismantling");
 //        retVal.add("ConveyorBelt");
 //        retVal.add("ToysArmor");
-        retVal.add("Pachinko");
+//        retVal.add("Pachinko");
 //        retVal.add("Refill");
 //        retVal.add("RollerCoaster");
 //        retVal.add("HauntedHouseAdventure");
+        retVal.add("DeathAll");
+        retVal.add("UnilateralPressing");
+        retVal.add("EXCharm");
+        retVal.add("DanceInTheDark");
+        retVal.add("GroudZero");
+        retVal.add("ChildPlay");
+        retVal.add("BreakLife");
+        retVal.add("OverDoze");
+        retVal.add("WitchsNight");
         return retVal;
     }
 

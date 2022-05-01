@@ -34,6 +34,13 @@
             <scope>system</scope>
             <systemPath>C:/Users/CoverStory/.m2/repository/evacipated/cardcrawl/desktop-1.0.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl</groupId>
+            <artifactId>StSLib</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>C:/Users/CoverStory/.m2/repository/evacipated/cardcrawl/StSLib.jar</systemPath>
+        </dependency>
     </dependencies>
     <build>
         <finalName>ALittleWorldMod</finalName>

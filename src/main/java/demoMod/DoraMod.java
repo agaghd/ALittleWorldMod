@@ -3,6 +3,7 @@ package demoMod;
 import basemod.BaseMod;
 import basemod.interfaces.*;
 import cards.*;
+import cards.despair.*;
 import characters.Dora;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -14,6 +15,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -60,6 +62,7 @@ public class DoraMod implements RelicGetSubscriber,
     private static final String MY_CHARACTER_BUTTON = "img/charSelect/DoraButton.png";
     private static final String MARISA_PORTRAIT = "img/charSelect/DoraPortrait.png";
     public static final Color SILVER = CardHelper.getColor(200, 200, 200);
+    public static final Color SLATE_GREY = CardHelper.getColor(112, 128, 144);
     private ArrayList<AbstractCard> cardsToAdd = new ArrayList<>();
     public static ArrayList<AbstractCard> recyclecards = new ArrayList<>();
 
@@ -67,6 +70,7 @@ public class DoraMod implements RelicGetSubscriber,
         //构造方法，初始化各种参数
         BaseMod.subscribe(this);
         BaseMod.addColor(AbstractCardEnum.Dora_COLOR, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER, ATTACK_CC, SKILL_CC, POWER_CC, ENERGY_ORB_CC, ATTACK_CC_PORTRAIT, SKILL_CC_PORTRAIT, POWER_CC_PORTRAIT, ENERGY_ORB_CC_PORTRAIT, CARD_ENERGY_ORB);
+        BaseMod.addColor(AbstractCardEnum.DESPAIR_COLOR, SLATE_GREY, SLATE_GREY, SLATE_GREY, SLATE_GREY, SLATE_GREY, SLATE_GREY, SLATE_GREY, ATTACK_CC, SKILL_CC, POWER_CC, ENERGY_ORB_CC, ATTACK_CC_PORTRAIT, SKILL_CC_PORTRAIT, POWER_CC_PORTRAIT, ENERGY_ORB_CC_PORTRAIT, CARD_ENERGY_ORB);
     }
 
     @Override
@@ -134,6 +138,7 @@ public class DoraMod implements RelicGetSubscriber,
         if (Settings.language == Settings.GameLanguage.ZHS) {
             card = "localization/ALittleWorldMod_Dora_cards-zh.json";
             relic = "localization/ALittleWorldMod_Dora_relics-zh.json";
+            power = "localization/ALittleWorldMod_powers-zh.json";
         } else {
             //其他语言配置的JSON
         }
@@ -141,6 +146,8 @@ public class DoraMod implements RelicGetSubscriber,
         BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
         String relicStrings = Gdx.files.internal(relic).readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
+        String powerStrings = Gdx.files.internal(power).readString(String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
     }
 
     private void loadCardsToAdd() {
@@ -170,6 +177,15 @@ public class DoraMod implements RelicGetSubscriber,
         this.cardsToAdd.add(new Refill());
         this.cardsToAdd.add(new RollerCoaster());
         this.cardsToAdd.add(new HauntedHouseAdventure());
+        this.cardsToAdd.add(new DeathAll());
+        this.cardsToAdd.add(new UnilateralPressing());
+        this.cardsToAdd.add(new EXCharm());
+        this.cardsToAdd.add(new DanceInTheDark());
+        this.cardsToAdd.add(new GroudZero());
+        this.cardsToAdd.add(new ChildPlay());
+        this.cardsToAdd.add(new BreakLife());
+        this.cardsToAdd.add(new OverDoze());
+        this.cardsToAdd.add(new WitchsNight());
     }
 
     //添加一度

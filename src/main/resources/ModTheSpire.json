@@ -6,7 +6,7 @@
   ],
   "description": "Adds Dora as a new playable character.",
   "dependencies": [
-    "basemod"
+    "basemod", "stslib"
   ],
   "version": "0.0.1",
   "sts_version": "03-07-2022"

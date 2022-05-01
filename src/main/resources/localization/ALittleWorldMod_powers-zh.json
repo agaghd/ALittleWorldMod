@@ -1,0 +1,16 @@
+{
+  "CharmPower": {
+    "NAME": "魅惑",
+    "DESCRIPTIONS": [
+      "每当这名敌人攻击或给予负面效果，指向一名随机敌人。"
+    ]
+  },
+  "WitchsNightPower": {
+    "NAME": "魔女之夜",
+    "DESCRIPTIONS": [
+      "在你的回合开始时抽 ",
+      "张牌，获得",
+      " 。"
+    ]
+  }
+}
