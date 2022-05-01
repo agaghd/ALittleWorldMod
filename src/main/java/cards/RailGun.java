@@ -7,8 +7,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import pathes.AbstractCardEnum;
 
 /**
@@ -27,7 +29,7 @@ public class RailGun extends CustomCard {
         super(ID, cardStrings.NAME, IMG, COST, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.Dora_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = DAMAGE;
-        this.baseMagicNumber = 1;
+        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -42,9 +44,15 @@ public class RailGun extends CustomCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        // TODO 造成6点伤害，当前能量与上限每差一点增加3点伤害
+        int energyMax = AbstractDungeon.player.energy.energy;
+        int currentEnergy = EnergyPanel.getCurrentEnergy();
+        int deta = energyMax - currentEnergy;
+        if (deta < 0) {
+            deta = 0;
+        }
+        int totalDamage = this.damage + deta * this.magicNumber;
         addToBot(new DamageAction(abstractMonster,
-                new DamageInfo(abstractPlayer, this.damage, this.damageTypeForTurn),
+                new DamageInfo(abstractPlayer, totalDamage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL));
     }
 

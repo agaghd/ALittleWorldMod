@@ -153,39 +153,8 @@ public class DoraMod implements RelicGetSubscriber,
     private void loadCardsToAdd() {
         //将自定义的卡牌添加到这里
         this.cardsToAdd.clear();
-        this.cardsToAdd.add(new StrikeOfDora());
-        this.cardsToAdd.add(new DefendOfDora());
-        this.cardsToAdd.add(new GashaponMachine());
-        this.cardsToAdd.add(new ToysCastle());
-        this.cardsToAdd.add(new ToysHelmet());
-        this.cardsToAdd.add(new TwinShoot());
-        this.cardsToAdd.add(new RangeLock());
-        this.cardsToAdd.add(new PumpkinAtomicBomb());
-        this.cardsToAdd.add(new FireAllBullets());
-        this.cardsToAdd.add(new PenetrateBullet());
-        this.cardsToAdd.add(new ButtHit());
-        this.cardsToAdd.add(new TwinForm());
-        this.cardsToAdd.add(new BurstShot());
-        this.cardsToAdd.add(new Ricochet());
-        this.cardsToAdd.add(new RailGun());
-        this.cardsToAdd.add(new PrecisionShoot());
-        this.cardsToAdd.add(new FirepowerIncrease());
-        this.cardsToAdd.add(new Dismantling());
-        this.cardsToAdd.add(new ConveyorBelt());
-        this.cardsToAdd.add(new ToysArmor());
-        this.cardsToAdd.add(new Pachinko());
-        this.cardsToAdd.add(new Refill());
-        this.cardsToAdd.add(new RollerCoaster());
-        this.cardsToAdd.add(new HauntedHouseAdventure());
-        this.cardsToAdd.add(new DeathAll());
-        this.cardsToAdd.add(new UnilateralPressing());
-        this.cardsToAdd.add(new EXCharm());
-        this.cardsToAdd.add(new DanceInTheDark());
-        this.cardsToAdd.add(new GroudZero());
-        this.cardsToAdd.add(new ChildPlay());
-        this.cardsToAdd.add(new BreakLife());
-        this.cardsToAdd.add(new OverDoze());
-        this.cardsToAdd.add(new WitchsNight());
+        this.cardsToAdd.addAll(ALittleWorldCardsManager.DORA_CARDS);
+        this.cardsToAdd.addAll(ALittleWorldCardsManager.DESPAIR_CARDS);
     }
 
     //添加一度

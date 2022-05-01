@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import pathes.ALittleWorldTags;
 import pathes.AbstractCardEnum;
 
 
@@ -28,6 +29,8 @@ public class GroudZero extends CustomCard {
                 CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 1;
+        this.tags.add(ALittleWorldTags.TAG_DESPAIR);
+
     }
 
     @Override

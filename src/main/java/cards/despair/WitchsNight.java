@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import pathes.ALittleWorldTags;
 import pathes.AbstractCardEnum;
 import powers.WitchsNightPower;
 
@@ -25,6 +26,8 @@ public class WitchsNight extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.POWER, AbstractCardEnum.DESPAIR_COLOR,
                 CardRarity.RARE, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 2;
+        this.tags.add(ALittleWorldTags.TAG_DESPAIR);
+
     }
 
     @Override

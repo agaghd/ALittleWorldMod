@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import pathes.ALittleWorldTags;
 import pathes.AbstractCardEnum;
 import powers.CharmPower;
 
@@ -28,6 +29,7 @@ public class EXCharm extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.DESPAIR_COLOR,
                 CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.exhaust = true;
+        this.tags.add(ALittleWorldTags.TAG_DESPAIR);
     }
 
     @Override

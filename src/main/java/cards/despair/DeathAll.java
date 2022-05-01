@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GiantTextEffect;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import org.lwjgl.Sys;
+import pathes.ALittleWorldTags;
 import pathes.AbstractCardEnum;
 
 
@@ -32,6 +33,7 @@ public class DeathAll extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.DESPAIR_COLOR,
                 CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.exhaust = true;
+        this.tags.add(ALittleWorldTags.TAG_DESPAIR);
     }
 
     @Override

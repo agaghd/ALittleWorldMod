@@ -86,7 +86,7 @@ public class Dora extends CustomPlayer {
 //        retVal.add("TwinForm");
 //        retVal.add("BurstShot");
 //        retVal.add("Ricochet");
-//        retVal.add("RailGun");
+        retVal.add("RailGun");
 //        retVal.add("PrecisionShoot");
 //        retVal.add("FirepowerIncrease");
 //        retVal.add("Dismantling");
@@ -96,15 +96,17 @@ public class Dora extends CustomPlayer {
 //        retVal.add("Refill");
 //        retVal.add("RollerCoaster");
 //        retVal.add("HauntedHouseAdventure");
-        retVal.add("DeathAll");
-        retVal.add("UnilateralPressing");
-        retVal.add("EXCharm");
-        retVal.add("DanceInTheDark");
-        retVal.add("GroudZero");
-        retVal.add("ChildPlay");
-        retVal.add("BreakLife");
-        retVal.add("OverDoze");
-        retVal.add("WitchsNight");
+        retVal.add("RussianDoll");
+
+//        retVal.add("DeathAll");
+//        retVal.add("UnilateralPressing");
+//        retVal.add("EXCharm");
+//        retVal.add("DanceInTheDark");
+//        retVal.add("GroudZero");
+//        retVal.add("ChildPlay");
+//        retVal.add("BreakLife");
+//        retVal.add("OverDoze");
+//        retVal.add("WitchsNight");
         return retVal;
     }
 

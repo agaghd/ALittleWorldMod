@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import pathes.ALittleWorldTags;
 import pathes.AbstractCardEnum;
 
 
@@ -29,6 +30,8 @@ public class OverDoze extends CustomCard {
     public OverDoze() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.DESPAIR_COLOR, CardRarity.RARE, CardTarget.ALL);
         this.exhaust = true;
+        this.tags.add(ALittleWorldTags.TAG_DESPAIR);
+
     }
 
     @Override

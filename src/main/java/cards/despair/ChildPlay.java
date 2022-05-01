@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import pathes.ALittleWorldTags;
 import pathes.AbstractCardEnum;
 
 
@@ -29,6 +30,7 @@ public class ChildPlay extends CustomCard {
                 CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
+        this.tags.add(ALittleWorldTags.TAG_DESPAIR);
     }
 
     @Override

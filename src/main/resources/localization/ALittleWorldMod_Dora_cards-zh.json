@@ -107,7 +107,7 @@
   },
   "RussianDoll": {
     "NAME": "俄罗斯人形",
-    "DESCRIPTION": "获得一张绝望魔法，其消耗为0。NL 消耗"
+    "DESCRIPTION": "获得一张绝望魔法，本回合其消耗为0。NL 消耗"
   },
   "DeathAll": {
     "NAME": "死亡叹息",
