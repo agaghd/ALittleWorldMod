@@ -13,22 +13,23 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import pathes.ALittleWorldTags;
 import pathes.AbstractCardEnum;
+import powers.DespairPower;
 
 
 public class ChildPlay extends CustomCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("ChildPlay");
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final String ID = "ChildPlay";
     // 防御图片
     private static final String IMG_PATH = "img/cards_Dora/Default.png";
 
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
     public ChildPlay() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.DESPAIR_COLOR,
-                CardRarity.RARE, CardTarget.ALL_ENEMY);
-        this.magicNumber = this.baseMagicNumber = 2;
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Dora_COLOR,
+                CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust = true;
         this.tags.add(ALittleWorldTags.TAG_DESPAIR);
     }
@@ -41,9 +42,10 @@ public class ChildPlay extends CustomCard {
                     addToBot(new RemoveSpecificPowerAction(mo, abstractPlayer, "Artifact"));
                 }
                 addToBot(new ApplyPowerAction(mo, abstractPlayer,
-                        new WeakPower(mo, this.magicNumber, false), this.magicNumber));
+                        new WeakPower(mo, 99, false), 99));
             }
         }
+        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new DespairPower(abstractPlayer, this.magicNumber), magicNumber));
     }
 
     @Override
@@ -56,7 +58,7 @@ public class ChildPlay extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeBaseCost(0);
             initializeDescription();
         }
     }

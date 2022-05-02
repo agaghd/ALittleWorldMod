@@ -1,16 +1,14 @@
 package powers;
 
-import cards.ALittleWorldCardsManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.random.Random;
 import utils.TextureUtils;
 
 public class TwinFormPower extends AbstractPower {
@@ -35,21 +33,27 @@ public class TwinFormPower extends AbstractPower {
         this.region128 = new TextureAtlas.AtlasRegion(tex_128, 1024, 768, 128, 128);
         this.isUpgrade = isUpgrade;
         updateDescription();
-        AbstractDungeon.player.gameHandSize += amount;
     }
 
     @Override
     public void atStartOfTurn() {
-        int index = new Random().random(0, ALittleWorldCardsManager.DESPAIR_CARDS.size() - 1);
-        AbstractCard abstractCard = ALittleWorldCardsManager.DESPAIR_CARDS.get(index);
-        if(isUpgrade){
-            abstractCard.upgrade();;
+        int despairPowerAmount = 0;
+        if (AbstractDungeon.player.hasPower(DespairPower.POWER_ID)) {
+            despairPowerAmount = AbstractDungeon.player.getPower(DespairPower.POWER_ID).amount;
         }
-        addToBot(new MakeTempCardInHandAction(abstractCard, 1));
+        int effect = despairPowerAmount * this.amount;
+        addToBot(new GainEnergyAction(effect));
+        addToBot(new DrawCardAction(effect));
     }
 
     @Override
     public void updateDescription() {
-        this.description = powerStrings.DESCRIPTIONS[0];
+        StringBuilder sb = new StringBuilder();
+        sb.append(powerStrings.DESCRIPTIONS[0]);
+        for (int i = 0; i < amount; i++) {
+            sb.append(" [W] ");
+        }
+        sb.append(powerStrings.DESCRIPTIONS[1]).append(amount).append(powerStrings.DESCRIPTIONS[2]);
+        this.description = sb.toString();
     }
 }

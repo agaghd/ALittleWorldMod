@@ -8,15 +8,23 @@
   "WitchsNightPower": {
     "NAME": "魔女之夜",
     "DESCRIPTIONS": [
-      "在你的回合开始时抽 ",
-      "张牌，获得",
-      " 。"
+      "获取额外的 #b",
+      "回合。"
     ]
   },
   "TwinFormPower": {
     "NAME": "双生形态",
     "DESCRIPTIONS": [
-      "回合开始时，随机获取一张绝望魔法。"
+      "回合开始时，获得",
+      "抽 #b",
+      "张牌。"
+    ]
+  },
+  "DespairPower": {
+    "NAME": "绝望",
+    "DESCRIPTIONS": [
+      "回合开始时，减少 #b",
+      " 点能量， 层数减少 #b1 。"
     ]
   }
 }

@@ -66,14 +66,15 @@ public class Dora extends CustomPlayer {
     public ArrayList<String> getStartingDeck() {
         //添加初始卡组
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add("StrikeOfDora");
-        retVal.add("StrikeOfDora");
-        retVal.add("StrikeOfDora");
-        retVal.add("StrikeOfDora");
-        retVal.add("DefendOfDora");
-        retVal.add("DefendOfDora");
-        retVal.add("DefendOfDora");
-        retVal.add("DefendOfDora");
+//        retVal.add("StrikeOfDora");
+//        retVal.add("StrikeOfDora");
+//        retVal.add("StrikeOfDora");
+//        retVal.add("StrikeOfDora");
+//        retVal.add("DefendOfDora");
+//        retVal.add("DefendOfDora");
+//        retVal.add("DefendOfDora");
+//        retVal.add("DefendOfDora");
+
 //        retVal.add("GashaponMachine");
 //        retVal.add("ToysCastle");
 //        retVal.add("ToysHelmet");
@@ -86,8 +87,8 @@ public class Dora extends CustomPlayer {
         retVal.add("TwinForm");
 //        retVal.add("BurstShot");
 //        retVal.add("Ricochet");
-        retVal.add("ClawMachine");
-        retVal.add("RailGun");
+//        retVal.add("ClawMachine");
+//        retVal.add("RailGun");
 //        retVal.add("PrecisionShoot");
 //        retVal.add("FirepowerIncrease");
 //        retVal.add("Dismantling");
@@ -99,15 +100,14 @@ public class Dora extends CustomPlayer {
 //        retVal.add("HauntedHouseAdventure");
         retVal.add("RussianDoll");
 
-//        retVal.add("DeathAll");
-//        retVal.add("UnilateralPressing");
-//        retVal.add("EXCharm");
-//        retVal.add("DanceInTheDark");
-//        retVal.add("GroudZero");
-//        retVal.add("ChildPlay");
-//        retVal.add("BreakLife");
-//        retVal.add("OverDoze");
-//        retVal.add("WitchsNight");
+        retVal.add("DeathAll");
+        retVal.add("UnilateralPressing");
+        retVal.add("DanceInTheDark");
+        retVal.add("GroudZero");
+        retVal.add("ChildPlay");
+        retVal.add("BreakLife");
+        retVal.add("OverDoze");
+        retVal.add("WitchsNight");
         return retVal;
     }
 

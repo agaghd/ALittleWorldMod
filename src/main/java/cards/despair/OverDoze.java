@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import pathes.ALittleWorldTags;
 import pathes.AbstractCardEnum;
+import powers.DespairPower;
 
 
 public class OverDoze extends CustomCard {
@@ -28,10 +29,11 @@ public class OverDoze extends CustomCard {
 
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
     public OverDoze() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.DESPAIR_COLOR, CardRarity.RARE, CardTarget.ALL);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Dora_COLOR,
+                CardRarity.UNCOMMON, CardTarget.ALL);
         this.exhaust = true;
         this.tags.add(ALittleWorldTags.TAG_DESPAIR);
-
+        this.magicNumber = this.baseMagicNumber = 1;
     }
 
     @Override
@@ -72,6 +74,7 @@ public class OverDoze extends CustomCard {
                 }
             }
         }
+        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new DespairPower(abstractPlayer, this.magicNumber), magicNumber));
     }
 
     @Override

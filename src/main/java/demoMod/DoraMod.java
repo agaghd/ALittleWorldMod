@@ -2,19 +2,19 @@ package demoMod;
 
 import basemod.BaseMod;
 import basemod.interfaces.*;
-import cards.*;
-import cards.despair.*;
+import cards.ALittleWorldCardsManager;
 import characters.Dora;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.Keyword;
+import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -45,6 +45,7 @@ public class DoraMod implements RelicGetSubscriber,
         OnPowersModifiedSubscriber,
         PostDrawSubscriber,
         PostEnergyRechargeSubscriber {
+    private static final String MOD_ID = "doramod";
     //    //图片
     private static final String MOD_BADGE = "img/UI_Dora/badge.png";
     //攻击、技能、能力牌的图片(512)
@@ -76,8 +77,7 @@ public class DoraMod implements RelicGetSubscriber,
     @Override
     public void receiveEditCharacters() {
         //添加角色到MOD中
-        BaseMod.addCharacter(new Dora("Dora"), MY_CHARACTER_BUTTON, MARISA_PORTRAIT,
-                ThmodClassEnum.Dora_CLASS);
+        BaseMod.addCharacter(new Dora("Dora"), MY_CHARACTER_BUTTON, MARISA_PORTRAIT, ThmodClassEnum.Dora_CLASS);
     }
 
     //初始化整个MOD,一定不能删
@@ -127,13 +127,20 @@ public class DoraMod implements RelicGetSubscriber,
 
     @Override
     public void receiveEditKeywords() {
-
+        String keywordsPath = "localization/ALittleWorld_Keyword_Strings-zh.json";
+        Gson gson = new Gson();
+        String json = Gdx.files.internal(keywordsPath).readString(String.valueOf(StandardCharsets.UTF_8));
+        Keyword[] keywords = gson.fromJson(json, Keyword[].class);
+        if (keywords != null) {
+            for (Keyword keyword : keywords) {
+                BaseMod.addKeyword(MOD_ID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+            }
+        }
     }
 
     @Override
     public void receiveEditStrings() {
         //读取遗物，卡牌，能力，药水，事件的JSON文本
-
         String relic = "", card = "", power = "", potion = "", event = "";
         if (Settings.language == Settings.GameLanguage.ZHS) {
             card = "localization/ALittleWorldMod_Dora_cards-zh.json";
@@ -149,6 +156,7 @@ public class DoraMod implements RelicGetSubscriber,
         String powerStrings = Gdx.files.internal(power).readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
     }
+
 
     private void loadCardsToAdd() {
         //将自定义的卡牌添加到这里
@@ -195,9 +203,7 @@ public class DoraMod implements RelicGetSubscriber,
         while (var1.hasNext()) {
             AbstractCard c = var1.next();
             AbstractCard card = c.makeStatEquivalentCopy();
-            AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(card,
-                    Settings.WIDTH / 2.0F,
-                    Settings.HEIGHT / 2.0F, false, true, true));
+            AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(card, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, false, true, true));
         }
         recyclecards.clear();
     }

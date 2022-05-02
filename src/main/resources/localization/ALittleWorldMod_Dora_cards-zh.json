@@ -39,8 +39,7 @@
   },
   "TwinForm": {
     "NAME": "双生形态",
-    "DESCRIPTION": "回合开始时，随机获取一张绝望魔法。",
-    "UPGRADE_DESCRIPTION": "回合开始时，随机获取一张升级过的绝望魔法。"
+    "DESCRIPTION": "回合开始时，你每有一层 doramod:绝望 , 额外获得 [R] 并抽一张牌"
   },
   "PenetrateBullet": {
     "NAME": "穿甲弹",
@@ -115,39 +114,40 @@
   },
   "DeathAll": {
     "NAME": "死亡叹息",
-    "DESCRIPTION": "消灭所有生命值小于等于你最大生命值的敌人。"
+    "DESCRIPTION": "消灭所有生命值小于等于你最大生命值一半的敌人。 NL doramod:绝望 !M! ",
+    "UPGRADE_DESCRIPTION": "消灭所有生命值小于等于你最大生命值70%的敌人。 NL doramod:绝望 !M! "
   },
   "UnilateralPressing": {
     "NAME": "单边压制",
-    "DESCRIPTION": "在本回合结束后，额外获得一回合。 NL 结束你的回合。 NL 消耗 "
+    "DESCRIPTION": "在本回合结束后，额外获得一回合。 NL 结束你的回合。 NL 消耗 NL doramod:绝望 !M! "
   },
   "EXCharm": {
     "NAME": "EX魅惑",
-    "DESCRIPTION": "敌方全体获得一层魅惑。  NL 消耗"
+    "DESCRIPTION": "敌方全体获得一层 doramod:魅惑。  NL 消耗 NL doramod:绝望 !M! "
   },
   "DanceInTheDark": {
     "NAME": "黑暗之舞",
-    "DESCRIPTION": "消除所有敌人的增益效果。 NL 消耗"
+    "DESCRIPTION": "消除所有敌人的增益效果。 NL 消耗 NL doramod:绝望 !M! "
   },
   "GroudZero": {
     "NAME": "原爆起点",
-    "DESCRIPTION": "眩晕所有敌人。 NL 消耗"
+    "DESCRIPTION": "眩晕所有敌人。 NL 消耗 NL doramod:绝望 !M! "
   },
   "ChildPlay": {
     "NAME": "孩童游戏",
-    "DESCRIPTION": "移除所有敌人的人工制品并给与 !M! 层虚弱。 NL 消耗"
+    "DESCRIPTION": "移除所有敌人的人工制品并给与99层虚弱。 NL 消耗 NL doramod:绝望 !M! "
   },
   "BreakLife": {
     "NAME": "生命断流",
-    "DESCRIPTION": "敌方全体最大生命减少 !M! %。"
+    "DESCRIPTION": "敌方全体最大生命减少20%。 NL doramod:绝望 !M! "
   },
   "OverDoze": {
     "NAME": "过量强化",
-    "DESCRIPTION": "所有敌人的强化效果反转。 NL 消耗"
+    "DESCRIPTION": "所有敌人的强化效果反转。 NL 消耗 NL doramod:绝望 !M! "
   },
   "WitchsNight": {
     "NAME": "魔女之夜",
-    "DESCRIPTION": "回合开始时，抽 !M! 张牌，获得 [R] [R]",
-    "UPGRADE_DESCRIPTION": "回合开始时，抽 !M! 张牌，获得 [R] [R] [R]"
+    "DESCRIPTION": "获得X个额外回合, 获得X层 doramod:绝望 NL 消耗",
+    "UPGRADE_DESCRIPTION": "获得X+1个额外回合, 获得X+1层 doramod:绝望 NL 消耗"
   }
 }
