@@ -1,61 +1,53 @@
-package cards.despair;
+package cards.dora.despair;
 
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
+import com.megacrit.cardcrawl.actions.watcher.SkipEnemiesTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 import pathes.ALittleWorldTags;
 import pathes.AbstractCardEnum;
 import powers.DespairPower;
-import powers.WitchsNightPower;
 
 
-public class WitchsNight extends CustomCard {
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("WitchsNight");
+public class UnilateralPressing extends CustomCard {
+    private static final CardStrings cardStrings
+            = CardCrawlGame.languagePack.getCardStrings("UnilateralPressing");
     private static final String NAME = cardStrings.NAME;
     private static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static final int COST = -1;
-    private static final String ID = "WitchsNight";
+    private static final int COST = 2;
+    private static final String ID = "UnilateralPressing";
     // 防御图片
     private static final String IMG_PATH = "img/cards_Dora/Default.png";
 
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
-    public WitchsNight() {
+    public UnilateralPressing() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.Dora_COLOR,
                 CardRarity.RARE, CardTarget.SELF);
-        this.tags.add(ALittleWorldTags.TAG_DESPAIR);
         this.exhaust = true;
+        this.tags.add(ALittleWorldTags.TAG_DESPAIR);
+        this.magicNumber = this.baseMagicNumber = 1;
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        int effect = EnergyPanel.totalCount;
-        if (this.energyOnUse != -1) {
-            effect = this.energyOnUse;
-        }
-        if (upgraded) {
-            effect += 1;
-        }
-        if (abstractPlayer.hasRelic("Chemical X")) {
-            effect += 2;
-            abstractPlayer.getRelic("Chemical X").flash();
-        }
-        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new WitchsNightPower(abstractPlayer, effect), effect));
-        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new DespairPower(abstractPlayer, effect), effect));
-        if (!this.freeToPlayOnce) {
-            abstractPlayer.energy.use(EnergyPanel.totalCount);
-        }
+        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new DespairPower(abstractPlayer, this.magicNumber), magicNumber));
+        addToBot(new VFXAction(new WhirlwindEffect(
+                new Color(1.0F, 0.9F, 0.4F, 1.0F), true)));
+        addToBot(new SkipEnemiesTurnAction());
+        addToBot(new PressEndTurnButtonAction());
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new WitchsNight();
+        return new UnilateralPressing();
     }
 
     @Override
@@ -63,7 +55,7 @@ public class WitchsNight extends CustomCard {
         //卡牌升级后的效果
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            upgradeBaseCost(1);
             initializeDescription();
         }
     }

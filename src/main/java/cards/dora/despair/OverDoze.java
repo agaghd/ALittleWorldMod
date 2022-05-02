@@ -1,4 +1,4 @@
-package cards.despair;
+package cards.dora.despair;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

@@ -1,7 +1,7 @@
 package cards;
 
-import cards.despair.*;
 import cards.dora.*;
+import cards.dora.despair.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 import java.util.ArrayList;
