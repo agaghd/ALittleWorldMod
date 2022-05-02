@@ -1,4 +1,4 @@
-package cards;
+package cards.dora;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -7,38 +7,40 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.BufferPower;
 import pathes.AbstractCardEnum;
+import powers.TwinFormPower;
 
 /**
- * 朵菈能力-玩具城堡
+ * 朵菈能力-双生模式
  * 照抄机宝
  */
-public class ToysCastle extends CustomCard {
+public class TwinForm extends CustomCard {
     private static final CardStrings cardStrings
-            = CardCrawlGame.languagePack.getCardStrings("ToysCastle");
-    private static final String ID = "ToysCastle";
-    private static final String IMG = "img/cards_Dora/power/ToysCastle.png";
-    private static final int COST = 2;
+            = CardCrawlGame.languagePack.getCardStrings("TwinForm");
+    private static final String ID = "TwinForm";
+    private static final String IMG = "img/cards_Dora/Default.png";
+    private static final int COST = 3;
 
-    public ToysCastle() {
+
+    public TwinForm() {
         super(ID, cardStrings.NAME, IMG, COST, cardStrings.DESCRIPTION,
-                CardType.POWER, AbstractCardEnum.Dora_COLOR, CardRarity.RARE, AbstractCard.CardTarget.SELF);
+                CardType.POWER, AbstractCardEnum.Dora_COLOR, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
     }
 
+
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new BufferPower(abstractPlayer, this.magicNumber), this.magicNumber));
+                new TwinFormPower(abstractPlayer, this.magicNumber, this.upgraded),
+                this.magicNumber));
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
@@ -46,6 +48,6 @@ public class ToysCastle extends CustomCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new ToysCastle();
+        return new TwinForm();
     }
 }

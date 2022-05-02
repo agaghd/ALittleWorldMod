@@ -83,7 +83,7 @@
   },
   "ToysArmor": {
     "NAME": "玩具装甲",
-    "DESCRIPTION": "获得 !M! 点多层护甲"
+    "DESCRIPTION": "获得 !M! 点多层护甲。 NL 消耗"
   },
   "ClawMachine": {
     "NAME": "娃娃机",
@@ -110,7 +110,8 @@
   },
   "RussianDoll": {
     "NAME": "俄罗斯人形",
-    "DESCRIPTION": "获得一张绝望魔法，本回合其消耗为0。 NL 消耗"
+    "DESCRIPTION": "获得一张绝望魔法，本回合其消耗为0。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "获得一张绝望魔法，本回合其消耗为0。"
   },
   "DeathAll": {
     "NAME": "死亡叹息",

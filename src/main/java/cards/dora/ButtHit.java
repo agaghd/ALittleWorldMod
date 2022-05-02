@@ -1,4 +1,4 @@
-package cards;
+package cards.dora;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -11,23 +11,21 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import pathes.AbstractCardEnum;
 
 /**
- * 朵菈-精密射击
- * 造成7点伤害，给与一层虚弱
+ * 朵菈-铳身攻击
  */
-public class PrecisionShoot extends CustomCard {
+public class ButtHit extends CustomCard {
 
     private static final CardStrings cardStrings
-            = CardCrawlGame.languagePack.getCardStrings("PrecisionShoot");
-    private static final String ID = "PrecisionShoot";
+            = CardCrawlGame.languagePack.getCardStrings("ButtHit");
+    private static final String ID = "ButtHit";
     private static final String IMG = "img/cards_Dora/Default.png";
     private static final int COST = 1;
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 6;
 
-    public PrecisionShoot() {
+    public ButtHit() {
         super(ID, cardStrings.NAME, IMG, COST, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.Dora_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = DAMAGE;
@@ -39,7 +37,7 @@ public class PrecisionShoot extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            upgradeDamage(2);
             upgradeMagicNumber(1);
         }
     }
@@ -49,12 +47,12 @@ public class PrecisionShoot extends CustomCard {
         addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         addToBot(new ApplyPowerAction(abstractMonster, abstractPlayer,
-                new WeakPower(abstractMonster, this.magicNumber, false),
+                new VulnerablePower(abstractMonster, this.magicNumber, false),
                 this.magicNumber));
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new PrecisionShoot();
+        return new ButtHit();
     }
 }

@@ -83,7 +83,7 @@ public class Dora extends CustomPlayer {
 //        retVal.add("FireAllBullets");
 //        retVal.add("PenetrateBullet");
 //        retVal.add("ButtHit");
-//        retVal.add("TwinForm");
+        retVal.add("TwinForm");
 //        retVal.add("BurstShot");
 //        retVal.add("Ricochet");
         retVal.add("ClawMachine");

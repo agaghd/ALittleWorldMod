@@ -1,6 +1,7 @@
 package cards;
 
 import cards.despair.*;
+import cards.dora.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 import java.util.ArrayList;
@@ -40,7 +41,7 @@ public class ALittleWorldCardsManager {
 
         DESPAIR_CARDS.add(new DeathAll());
         DESPAIR_CARDS.add(new UnilateralPressing());
-        DESPAIR_CARDS.add(new EXCharm());
+//        DESPAIR_CARDS.add(new EXCharm());
         DESPAIR_CARDS.add(new DanceInTheDark());
         DESPAIR_CARDS.add(new GroudZero());
         DESPAIR_CARDS.add(new ChildPlay());

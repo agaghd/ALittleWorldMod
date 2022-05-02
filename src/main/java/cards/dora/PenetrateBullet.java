@@ -1,9 +1,9 @@
-package cards;
+package cards.dora;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,46 +13,40 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pathes.AbstractCardEnum;
 
 /**
- * 朵菈-爆发射击
- * 抄袭战士
+ * 朵菈 穿甲弹
  */
-public class Ricochet extends CustomCard {
+public class PenetrateBullet extends CustomCard {
 
     private static final CardStrings cardStrings
-            = CardCrawlGame.languagePack.getCardStrings("Ricochet");
-    private static final String ID = "Ricochet";
-    private static final String IMG = "img/cards_Dora/Default.png";
+            = CardCrawlGame.languagePack.getCardStrings("PenetrateBullet");
+    private static final String ID = "PenetrateBullet";
+    private static final String IMG = "img/cards_Dora/attack/PenetrateBullet.png";
     private static final int COST = 1;
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 10;
 
-    private static final int COUNT = 3;
-
-    public Ricochet() {
+    public PenetrateBullet() {
         super(ID, cardStrings.NAME, IMG, COST, cardStrings.DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.Dora_COLOR, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+                AbstractCardEnum.Dora_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = DAMAGE;
-        this.baseMagicNumber = COUNT;
-        this.magicNumber = this.baseMagicNumber;
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeDamage(4);
         }
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        for (int index = 0; index < this.magicNumber; index++) {
-            addToBot(new AttackDamageRandomEnemyAction(this,
-                    AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        }
+        addToBot(new RemoveAllBlockAction(abstractMonster, abstractPlayer));
+        addToBot(new DamageAction(abstractMonster, new DamageInfo(abstractPlayer, this.damage, this.damageTypeForTurn),
+                AbstractGameAction.AttackEffect.FIRE));
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new Ricochet();
+        return new PenetrateBullet();
     }
 }

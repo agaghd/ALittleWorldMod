@@ -1,4 +1,4 @@
-package cards;
+package cards.dora;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -14,25 +14,22 @@ import pathes.AbstractCardEnum;
  * 朵菈能力-玩具城堡
  * 照抄机宝
  */
-public class TwinForm extends CustomCard {
+public class ToysCastle extends CustomCard {
     private static final CardStrings cardStrings
-            = CardCrawlGame.languagePack.getCardStrings("TwinForm");
-    private static final String ID = "TwinForm";
-    private static final String IMG = "img/cards_Dora/Default.png";
-    private static final int COST = 3;
+            = CardCrawlGame.languagePack.getCardStrings("ToysCastle");
+    private static final String ID = "ToysCastle";
+    private static final String IMG = "img/cards_Dora/power/ToysCastle.png";
+    private static final int COST = 2;
 
-
-    public TwinForm() {
+    public ToysCastle() {
         super(ID, cardStrings.NAME, IMG, COST, cardStrings.DESCRIPTION,
-                CardType.POWER, AbstractCardEnum.Dora_COLOR, CardRarity.RARE, CardTarget.SELF);
+                CardType.POWER, AbstractCardEnum.Dora_COLOR, CardRarity.RARE, AbstractCard.CardTarget.SELF);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
     }
 
-
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        // TODO 改为回合开始时，随机获取一张绝望魔法
         addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer,
                 new BufferPower(abstractPlayer, this.magicNumber), this.magicNumber));
     }
@@ -49,6 +46,6 @@ public class TwinForm extends CustomCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new TwinForm();
+        return new ToysCastle();
     }
 }
